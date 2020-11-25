@@ -4,10 +4,10 @@ pragma experimental ABIEncoderV2;
 
 import "../TransferDefinition.sol";
 
-/// @title Hashlock Transfer
-/// @notice This contract allows users to claim a payment locked in
-///         the application if they provide the correct preImage. The payment is
-///         reverted if not unlocked by the timelock if one is provided.
+/// @title Message Transfer
+/// @notice A transfer with no verification and only a message as the state.
+///         Can be used to communicate with other parties without an external
+///         communication provider.
 
 contract MessageTransfer is TransferDefinition {
     struct TransferState {
